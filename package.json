@@ -1,31 +1,31 @@
 {
-    "name": "udemy-nodejs-mvc",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon app.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nauijohn/Udemy-NodeJS-MVC.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/nauijohn/Udemy-NodeJS-MVC/issues"
-    },
-    "homepage": "https://github.com/nauijohn/Udemy-NodeJS-MVC#readme",
-    "devDependencies": {
-        "nodemon": "^2.0.21"
-    },
-    "dependencies": {
-        "body-parser": "^1.20.2",
-        "ejs": "^3.1.8",
-        "express": "^4.18.2",
-        "express-handlebars": "^7.0.2",
-        "pug": "^3.0.2"
-    }
+  "name": "udemy-nodejs-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nauijohn/Udemy-NodeJS-MVC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nauijohn/Udemy-NodeJS-MVC/issues"
+  },
+  "homepage": "https://github.com/nauijohn/Udemy-NodeJS-MVC#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-handlebars": "^3.0.2",
+    "pug": "^3.0.2"
+  }
 }
