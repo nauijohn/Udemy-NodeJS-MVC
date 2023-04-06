@@ -1,1 +1,9 @@
-[{"title":"Book","imageUrl":"https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg","description":"Good book","price":"19.99"}]
+[
+  {
+    "id": "1234",
+    "title": "Book",
+    "imageUrl": "https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg",
+    "description": "Good book",
+    "price": "19.99"
+  }
+]
