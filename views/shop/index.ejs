@@ -8,6 +8,7 @@
     <main>
         <% if (products.length > 0) { %>
             <div class="grid">
+                <%= console.log('products: ', products); %>
                 <% for (let product of products) { %>
                     <article class="card product-item">
                         <header class="card__header">

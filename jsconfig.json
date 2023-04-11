@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "checkJs": true,
-    "module": "ES6"
+    "checkJs": false,
+    "module": "ES6",
+    "moduleResolution": "nodenext"
   },
   "exclude": ["node_modules/"]
 }
