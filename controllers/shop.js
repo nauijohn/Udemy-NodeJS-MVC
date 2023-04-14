@@ -1,7 +1,16 @@
 const Product = require('../models/product');
 
 exports.getProducts = (req, res, next) => {
-  Product.findAll()
+  // Product.findAll()
+  //   .then(products =>
+  //     res.render('./shop/product-list', {
+  //       products: products,
+  //       pageTitle: 'All Products',
+  //       path: '/products',
+  //     })
+  //   )
+  //   .catch(err => console.log(err));
+  Product.fetchAll()
     .then(products =>
       res.render('./shop/product-list', {
         products: products,
@@ -14,7 +23,20 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findByPk(prodId, { raw: true })
+  console.log('prodId: ', prodId);
+  // Product.findByPk(prodId, { raw: true })
+  //   .then(product => {
+  //     res.render('shop/product-detail', {
+  //       pageTitle: product.title,
+  //       product: product,
+  //       path: '/products',
+  //     });
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.status(400).render('404', { pageTitle: 'Page Not Found', path: '' });
+  //   });
+  Product.findById(prodId)
     .then(product => {
       res.render('shop/product-detail', {
         pageTitle: product.title,
@@ -29,7 +51,16 @@ exports.getProduct = (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
-  Product.findAll({ raw: true })
+  // Product.findAll({ raw: true })
+  //   .then(products =>
+  //     res.render('./shop/index', {
+  //       products: products,
+  //       pageTitle: 'Shop',
+  //       path: '/',
+  //     })
+  //   )
+  //   .catch(err => console.log(err));
+  Product.fetchAll()
     .then(products =>
       res.render('./shop/index', {
         products: products,
