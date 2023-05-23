@@ -25,8 +25,14 @@ exports.postAddProduct = (req, res, next) => {
   //     res.redirect('/admin/products');
   //   })
   //   .catch(err => console.log(err));
-
-  const product = new Product(title, price, description, imageUrl);
+  const product = new Product(
+    title,
+    price,
+    description,
+    imageUrl,
+    null,
+    req.user._id
+  );
   product
     .save()
     .then(result => {
@@ -37,7 +43,6 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getEditProduct = (req, res, next) => {
-  console.log('HERE');
   const editMode = req.query.edit;
   if (!editMode) return res.redirect('/');
   const prodId = req.params.productId;

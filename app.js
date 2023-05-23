@@ -11,6 +11,7 @@ const errorController = require('./controllers/error');
 // const Order = require('./models/order');
 // const OrderItem = require('./models/order-item');
 const mongoConnect = require('./util/database').mongoConnect;
+const User = require('./models/user');
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
@@ -24,13 +25,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  // User.findByPk(1)
-  //   .then(user => {
-  //     req['user'] = user;
-  //     next();
-  //   })
-  //   .catch(err => console.log(err));
-  next();
+  console.log('postAddProduct');
+  User.findById('643c4e8f5bb693d7c182bb95')
+    .then(user => {
+      req['user'] = user;
+      next();
+    })
+    .catch(err => console.log(err));
 });
 
 app.use('/admin', adminRoutes);
